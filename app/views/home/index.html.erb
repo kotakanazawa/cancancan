@@ -2,5 +2,13 @@
 <p>Find me in app/views/home/index.html.erb</p>
 
 <% if can? :manage, current_user %>
-  <p>current_userがmanage権限を持っているときだけ表示されます</p>
+  <p>current_userがadminで、manage権限を持っているときだけ表示されます</p>
+<% end %>
+
+<% if can? :read, current_user %>
+  <p>current_userがadminで、read権限を持っているときだけ表示されます</p>
+<% end %>
+
+<% if can? :update, current_user %>
+  <p>current_userがadminで、update権限を持っているときだけ表示されます</p>
 <% end %>
